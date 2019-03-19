@@ -15,12 +15,12 @@ class Pins extends Component {
   // disable buttons if the button plus the previous roll in the frame would
   //exceed 10
   disableButton = num => {
-    // TODO - fix disableButton function to refresh on new player/frame
-    return false;
     if (this.state.pinsDown === null) {
       return false;
-    } else if (this.state.pinsDown + num > 10) {
-      return true;
+    } else if (this.props.currRoll[1][1]) {
+      if (this.state.pinsDown + num > 10) {
+        return true;
+      }
     } else {
       return false;
     }

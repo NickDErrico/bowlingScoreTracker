@@ -16,7 +16,6 @@ class App extends Component {
   //The controller of the game. calcCurrRoll is the function that transitions from
   //roll to roll, frame to frame, and player to player.
   calcCurrRoll = (rollInfo, num) => {
-    console.log(rollInfo, num);
     if (!rollInfo.length) {
       rollInfo = [0, [0, 0]];
     }
