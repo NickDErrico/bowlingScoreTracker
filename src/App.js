@@ -47,8 +47,7 @@ class App extends Component {
       }
       //if it is the last role in the players frame increment the player
     } else if (rollidx === 1) {
-      playeridx++;
-      newRollInfo = [playeridx, [frameidx, 0]];
+      newRollInfo = [playeridx + 1, [frameidx, 0]];
     } else {
       //if a strike was rolled
       if (num === 10) {
@@ -63,8 +62,7 @@ class App extends Component {
         }
         //if it is the first roll in the players frame increment the roll
       } else {
-        rollidx++;
-        newRollInfo = [playeridx, [frameidx, rollidx]];
+        newRollInfo = [playeridx, [frameidx, rollidx + 1]];
       }
     }
 
